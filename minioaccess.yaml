@@ -3,6 +3,6 @@ kind: Secret
 metadata:
   name: minioaccess
   namespace: kubeflow
-data:
-  AWS_ACCESS_KEY_ID: xxxxxxxx
-  AWS_SECRET_ACCESS_KEY: xxxxxxxxxxxx
+# data:
+#   # AWS_ACCESS_KEY_ID: xxxxxxxx
+#   # AWS_SECRET_ACCESS_KEY: xxxxxxxxxxxx

@@ -28,12 +28,12 @@ spec:
           env:
             - name: "MLFLOW_S3_ENDPOINT_URL"
               value: "http://minio-service.kubeflow.svc.cluster.local:9000"
-            - name: "AWS_ACCESS_KEY_ID"
-              valueFrom: { secretKeyRef: { name: "minioaccess", key: "AWS_ACCESS_KEY_ID" } }
-            - name: "AWS_SECRET_ACCESS_KEY"
-              valueFrom: { secretKeyRef: { name: "minioaccess", key: "AWS_SECRET_ACCESS_KEY" } }
-            - name: "AWS_BUCKET"
-              value: "mlflow"
+            # - name: "AWS_ACCESS_KEY_ID"
+            #   valueFrom: { secretKeyRef: { name: "minioaccess", key: "AWS_ACCESS_KEY_ID" } }
+            # - name: "AWS_SECRET_ACCESS_KEY"
+            #   valueFrom: { secretKeyRef: { name: "minioaccess", key: "AWS_SECRET_ACCESS_KEY" } }
+            - name: "GCS_BUCKET"
+              value: "kubeflow-demo-4432"
       volumes:
         - name: secret-volume
           secret:
